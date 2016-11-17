@@ -1,12 +1,12 @@
 # Samsung Tensorflow
-This repo is creaded for Samsung Tensorflow tutorial.
+This repo is created for Samsung Tensorflow tutorial.
 
 ## References
 [TensorFlow-Examples](https://github.com/aymericdamien/TensorFlow-Examples) - TensorFlow tutorials and code examples for beginners
 
 [TensorFlow API](https://www.tensorflow.org/versions/r0.11/api_docs/index.html) - TensorFlow API Documentation
 
-[TensorFlow in a Nutshell](https://medium.com/@ilblackdragon/tensorflow-tutorial-part-4-958c29c717a0#.tyj4fq2yf) - Combining Categorical and Continuous Features
+[Illia's Tutorial](https://medium.com/@ilblackdragon/tensorflow-tutorial-part-4-958c29c717a0#.tyj4fq2yf) - Combining Categorical and Continuous Features
 
 ## Tutorial index
 #### Week 1 
