@@ -12,7 +12,7 @@ This repo is created for Samsung Tensorflow tutorial.
 
 #### Week 2
 
-* [Neural Network with Categorical Features]https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20categorical_features.ipynb) - Neural network for Titanic dataset classification
+* [Neural Network with Categorical Features](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20categorical_features.ipynb) - Neural Network for Titanic dataset classification
 * [Convolutional Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/2.%20convolutional_neural_network.ipynb) - Convnet for mnist dataset classification
 * [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/3.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
 
