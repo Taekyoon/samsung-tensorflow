@@ -12,8 +12,8 @@ This repo is created for Samsung Tensorflow tutorial.
 
 #### Week 1 
 
-* [Convolutional Neural Network]() - Convnet for mnist dataset classification
-* [Recurrent Neural Network]() - LSTM RNN for mnist dataset classification
+* [Convolutional Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20convolutional%20neural%20network.ipynb) - Convnet for mnist dataset classification
+* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/2.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
 
 ## References
 [TensorFlow-Examples](https://github.com/aymericdamien/TensorFlow-Examples) - TensorFlow tutorials and code examples for beginners
