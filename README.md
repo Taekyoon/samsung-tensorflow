@@ -6,14 +6,15 @@ This repo is created for Samsung Tensorflow tutorial.
 ## Tutorial index
 #### Week 1 
 * [Introduction to MNIST dataset](https://github.com/yunjey/samsung-tensorflow/blob/master/week1/1.%20mnist_data_introduction.ipynb) - Download and visualize MNIST dataset
-* [TensorFlow basic] (https://github.com/yunjey/samsung-tensorflow/blob/master/week1/2.%20tensorflow_basic.ipynb) - Session / Constants / Variables / Sharing variables / Placeholder
-* [Feed forward neural network](https://github.com/yunjey/samsung-tensorflow/blob/master/week1/3.%20feed_forward_neural_network.ipynb) - Neural network for MNIST dataset classification
-* [Neural network with categorical features](https://github.com/yunjey/samsung-tensorflow/blob/master/week1/4.%20categorical_features.ipynb) - Neural network for Titanic dataset classification
+* [TensorFlow Basic] (https://github.com/yunjey/samsung-tensorflow/blob/master/week1/2.%20tensorflow_basic.ipynb) - Session / Constants / Variables / Sharing variables / Placeholder
+* [Feed Forward Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week1/3.%20feed_forward_neural_network.ipynb) - Neural network for MNIST dataset classification
+
 
 #### Week 2
 
-* [Convolutional Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20convolutional_neural_network.ipynb) - Convnet for mnist dataset classification
-* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/2.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
+* [Neural Network with Categorical Features](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20categorical_features.ipynb) - Neural Network for Titanic dataset classification
+* [Convolutional Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/2.%20convolutional_neural_network.ipynb) - Convnet for mnist dataset classification
+* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/3.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
 
 <br>
 
