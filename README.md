@@ -19,4 +19,4 @@ This repo is created for Samsung Tensorflow tutorial.
 #### Week 3
 * [TensorBoard] (https://github.com/yunjey/samsung-tensorflow/blob/master/week3/1.%20tensorboard.ipynb) - Tensorboard for visualizing the model and real-time debugging
 * [Text Classification](https://github.com/yunjey/samsung-tensorflow/blob/master/week3/2.%20cnn_text_classification.ipynb) - Convolutional Neural Network for Sentiment Analysis
-* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week3/3.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
+* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week3/3.%20recurrent_neural_network.ipynb) - LSTM RNN for mnist dataset classification
