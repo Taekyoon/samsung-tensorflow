@@ -14,7 +14,8 @@ This repo is created for Samsung Tensorflow tutorial.
 
 * [Neural Network with Categorical Features](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/1.%20categorical_features.ipynb) - Neural Network for Titanic dataset classification
 * [Convolutional Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/2.%20convolutional_neural_network.ipynb) - Convnet for mnist dataset classification
-* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week2/3.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
 
-<br>
 
+#### Week 3
+* [TensorBoard] (https://github.com/yunjey/samsung-tensorflow/blob/master/week3/1.%20tensorboard.ipynb) - Tensorboard for visualizing the model and real-time debugging
+* [Recurrent Neural Network](https://github.com/yunjey/samsung-tensorflow/blob/master/week3/3.%20recurrent%20neural%20network.ipynb) - LSTM RNN for mnist dataset classification
