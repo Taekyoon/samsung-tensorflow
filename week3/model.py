@@ -4,15 +4,15 @@ import tensorflow as tf
 class TextCNN(object):
     
     def __init__(self, batch_size=100, seq_length=58, num_class=2, vocab_size=18768, 
-                 dim_emb=256, filter_sizes=[3,4,5], num_filters=[50,50,50]):
+                 dim_emb=256, filter_sizes=[2,3,4], num_filters=50):
         """
         Args:
             seq_length: maximum sequence length
             num_class: number of class; default is 2 (postive or negative)
             vocab_size: vocabulary size; number of different words
             dim_emb: embedding size
-            filter_sizes: list for filter size; e.g [3, 4, 5]
-            num_filters: list for number of filter; e.g [128, 128, 128]    
+            filter_sizes: list for filter size; e.g [2, 3, 4]
+            num_filters: number of filter; default is 50
         """
         
         self.x = tf.placeholder(tf.int32, [None, seq_length], name='x')
@@ -26,31 +26,31 @@ class TextCNN(object):
             x_embed = tf.expand_dims(x_embed, 3)          # (batch_size, seq_length, dim_emb, 1)
             
         pooled_outputs = []
-        num_total_filter = 0
-        for i, (f_s, n_f) in enumerate(zip(filter_sizes, num_filters)):
-            num_total_filter += n_f
-            
+        for i, filter_size in enumerate(filter_sizes):
             with tf.variable_scope('conv_maxpool_%d' %(i+1)):
-                w = tf.get_variable('w', shape=[f_s, dim_emb, 1, n_f], initializer=tf.contrib.layers.xavier_initializer())
-                b = tf.get_variable('b', shape=[n_f], initializer=tf.constant_initializer(0.0))
+                filter_shape = [filter_size, dim_emb, 1, num_filters]
+                w = tf.get_variable('w', shape=filter_shape, initializer=tf.contrib.layers.xavier_initializer())
+                b = tf.get_variable('b', shape=[num_filters], initializer=tf.constant_initializer(0.0))
                 
-                conv = tf.nn.conv2d(x_embed, w, strides=[1, 1, 1, 1], padding='VALID') + b   # (batch_size, seq_length - filter_size + 1, 1, num_filter)
+                conv = tf.nn.conv2d(x_embed, w, strides=[1, 1, 1, 1], padding='VALID') + b   # (batch_size, seq_length - filter_size + 1, 1, num_filters)
                 relu = tf.nn.relu(conv)
-                pooled = tf.nn.max_pool(relu, [1, seq_length - f_s + 1, 1, 1], [1, 1, 1, 1], padding='VALID')
-                pooled_outputs.append(pooled)  # (number of diffent filter) @ [batch_size, 1, 1, num_filter]
+                pooled = tf.nn.max_pool(relu, [1, seq_length - filter_size + 1, 1, 1], [1, 1, 1, 1], padding='VALID')
+                pooled_outputs.append(pooled)  # (number of diffent filter) @ [batch_size, 1, 1, num_filters]
         
         pooled = tf.concat(3, pooled_outputs)
         pooled = tf.reshape(pooled, [batch_size, -1])
         
         with tf.variable_scope('output_layer'):
+            num_total_filter = len(filter_sizes) * num_filters
             w = tf.get_variable('w', shape=[num_total_filter, num_class], initializer=tf.contrib.layers.xavier_initializer())
             b = tf.get_variable('b', shape=[num_class], initializer=tf.constant_initializer(0.0))
             
             out = tf.matmul(pooled, w) + b    # (batch_size, num_class)
+
         
         with tf.name_scope('optimizer'):
             self.loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(out, self.y))
-            self.train_op = tf.train.AdamOptimizer(0.001, beta1=0.5).minimize(self.loss)        
+            self.train_op = tf.train.AdamOptimizer(0.001).minimize(self.loss)        
         
         with tf.name_scope('evaluation'):
             self.pred = tf.arg_max(out, 1)
